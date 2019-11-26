@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<TabPane fx:id="projectTP" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <tabs>
+      <Tab fx:id="tab1" text="Billing Software">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="757.0">
+               <children>
+                  <TableView fx:id="projectTV" layoutX="231.0" prefHeight="400.0" prefWidth="527.0">
+                    <columns>
+                      <TableColumn fx:id="col1" prefWidth="77.0" text="Item Type" />
+                      <TableColumn fx:id="col2" prefWidth="73.0" text="Item Code" />
+                        <TableColumn fx:id="col3" prefWidth="75.0" text="Item Name" />
+                        <TableColumn fx:id="col4" prefWidth="105.0" text="Brand" />
+                        <TableColumn fx:id="col5" prefWidth="72.0" text="Quantity" />
+                        <TableColumn fx:id="col6" prefWidth="48.0" text="Price" />
+                        <TableColumn fx:id="col7" prefWidth="75.0" text="Discount" />
+                    </columns>
+                  </TableView>
+                  <ChoiceBox fx:id="typeCB" layoutX="14.0" layoutY="14.0" prefWidth="150.0" />
+                  <TextField fx:id="codeTF" layoutX="14.0" layoutY="58.0" />
+                  <TextField fx:id="nameTF" layoutX="14.0" layoutY="95.0" />
+                  <TextField fx:id="brandTF" layoutX="14.0" layoutY="130.0" />
+                  <TextField fx:id="quantityTF" layoutX="14.0" layoutY="173.0" />
+                  <TextField fx:id="priceTF" layoutX="14.0" layoutY="213.0" />
+                  <Button fx:id="addButton" layoutX="19.0" layoutY="287.0" mnemonicParsing="false" onAction="#handleAddButton" text="Add" />
+                  <Button fx:id="updateButton" layoutX="80.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleUpdateButton" text="Update" />
+                  <Button fx:id="removeButton" layoutX="77.0" layoutY="287.0" mnemonicParsing="false" onAction="#handleRemoveButton" text="Remove" />
+                  <Button fx:id="printButton" layoutX="17.0" layoutY="321.0" mnemonicParsing="false" onAction="#handlePrintButton" text="Print" />
+                  <TextField fx:id="discountTF" layoutX="14.0" layoutY="251.0" />
+                  <Button fx:id="saveButton" layoutX="164.0" layoutY="287.0" mnemonicParsing="false" onAction="#handleSaveButton" text="Save" />
+                  <Button fx:id="cancelButton" layoutX="164.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleCancelButton" text="Cancel" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="tab2" text="Receipt">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="204.0" layoutY="47.0" text="Original Price" />
+                  <Label layoutX="204.0" layoutY="83.0" text="Discount Price" />
+                  <Label layoutX="204.0" layoutY="120.0" text="Savings" />
+                  <Label layoutX="210.0" layoutY="157.0" text="Taxes" />
+                  <Label layoutX="203.0" layoutY="192.0" text="Subtotal" />
+                  <Label layoutX="213.0" layoutY="219.0" text="Total" />
+                  <Label fx:id="label1" layoutX="362.0" layoutY="47.0" text="Label" />
+                  <Label fx:id="label2" layoutX="362.0" layoutY="83.0" text="Label" />
+                  <Label fx:id="label3" layoutX="362.0" layoutY="120.0" text="Label" />
+                  <Label fx:id="label4" layoutX="362.0" layoutY="157.0" text="Label" />
+                  <Label fx:id="label5" layoutX="362.0" layoutY="192.0" text="Label" />
+                  <Label fx:id="label6" layoutX="362.0" layoutY="219.0" text="Label" />
+                  <Label fx:id="label7" layoutX="212.0" layoutY="255.0" text="Label" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
